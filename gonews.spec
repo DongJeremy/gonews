@@ -1,12 +1,20 @@
+%global provider        github
+%global provider_tld    com
+%global project         DongJeremy
+%global repo            gonews
+# https://github.com/DongJeremy/gonews
+%global provider_prefix %{provider}.%{provider_tld}/%{project}/%{repo}
+%global import_path     %{provider_prefix}
+
 Name:           gonews
 Version:        0.0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        gonews Daily News Retrieval Platform
 
 Group:          Development/Tools
 License:        MIT
-URL:            https://github.com/DongJeremy/%{name}
-Source0:        https://github.com/archive/%{commit}/%{name}-%{version}.tar.gz
+URL:            https://%{provider_prefix}
+Source0:        https://%{provider_prefix}/archive/v%{version}.tar.gz
 
 BuildRequires:  golang, upx
 Requires:       redis, git
