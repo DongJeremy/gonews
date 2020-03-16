@@ -7,8 +7,8 @@
 %global import_path     %{provider_prefix}
 
 Name:           gonews
-Version:        0.0.1
-Release:        2%{?dist}
+Version:        0.0.2
+Release:        1%{?dist}
 Summary:        gonews Daily News Retrieval Platform
 
 Group:          Development/Tools
