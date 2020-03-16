@@ -1,0 +1,13 @@
+[Unit]
+Description=gonews
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/gonews/gonews  -c /usr/local/gonews/config.ini
+ExecStop=/bin/kill -15 $MAINPID
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
